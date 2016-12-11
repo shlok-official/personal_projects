@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="/assets/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-fluid">
+            <h2>
+                {{{movieList.Title}}}
+            </h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src=" {{{movieList.Poster}}}" alt="{{{movieList.title}}}" width="300" height="450" />
+                </div>
+
+                <div class="col-md-4">
+                    <dl>
+                        <dt>
+                            <span><span class='movie-text'>Director：</span>
+                        </dt>
+                        <dd>
+                            <span><span class='movie-text-content-alt'>{{{movieList.Director}}}</span>
+                        </dd>
+                        <dt>
+                            <span><span class='movie-text'>Actor：</span>
+                        </dt>
+                        <dd>
+                            <span><span class='movie-text-content-alt'>{{{movieList.Actors}}}</span>
+                        </dd>
+                        <dt>
+                            <span><span class='movie-text'>Release Date:</span>
+                        </dt>
+                        <dt>
+                            <span><span class='movie-text-content-alt'>{{{movieList.Released}}}</span>
+                        </dt>
+                        <dt>
+                            <span><span class='movie-text'>Genre：</span>
+                        </dt>
+                        <dt>
+                            <span><span class='movie-text-content-alt'>{{{movieList.Genre}}}</span>
+                        </dt>
+                        <dt>
+                            <span><span class='movie-text'>IMDB Rating:</span>
+                        </dt>
+                        <dd>
+                            <span><span class='movie-text-content-alt'>{{{movieList.imdbRating}}}</span>
+                        </dd>
+                        <dt>
+                            <span><span class='movie-text'>User Rating:</span>
+                        </dt>
+                        <dt>
+                            <form action="/updateRating" method="POST" class="form-horizontal">
+
+                                <span class="starRating">
+        <input id="rating5" type="radio" name="rating" value="5">
+        <label for="rating5">5</label>
+        <input id="rating4" type="radio" name="rating" value="4">
+        <label for="rating4">4</label>
+        <input id="rating3" type="radio" name="rating" value="3" checked>
+        <label for="rating3">3</label>
+        <input id="rating2" type="radio" name="rating" value="2">
+        <label for="rating2">2</label>
+        <input id="rating1" type="radio" name="rating" value="1">
+        <label for="rating1">1</label>
+      </span>
+                                <div class='row'>
+
+                                    <button type="submit" class="btn btn-default col-sm-offset-3" name="IMDB" value="{{{movieList.Title}}}" style="margin-top: 10px">Update Rating
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                </button>
+                                </div>
+                            </form>
+                        </dt>
+                    </dl>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

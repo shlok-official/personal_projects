@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="/assets/css/all.css" rel="stylesheet">
+</head>
+
+<body class="col-md-12">
+
+  <div class="col-md-12" align="right">
+    <a style="margin-top: 10px background-color: #4CAF50 " class="button_eff" href="/nearByTheatres" role="button">Near BY Theatres
+                  </a >
+    <div class="btn-group">
+      
+      <button  style="margin-top: 10px color: #4CAF50 "class="button_eff" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    My Account
+                    </button>
+      
+
+      <div class="dropdown-menu">
+        <div> <a id="modal-936086" href="/login" role="button" class="btn">Sign in/Sign up</a >  </div>                    
+                        <div><a id="modal-936088" href="/profile" role="button" class="btn" >Profile</a ></div>
+                        <div><a id="modal-936089" href="/logout" role="button" class="btn" >Log out</a ></div>
+                    </div>
+                   </div>
+    {{#if error}}
+    <div class="form-group alert alert-danger text-goes-here col-sm-3" id="error-container" align="right">
+        {{{error}}}
+    </div>
+    {{/if}}
+    {{#if loginError}}
+    <div class="form-group alert alert-danger text-goes-here col-md-4" id="error-container" align="center">
+        {{{loginError}}}
+    </div>
+    {{/if}}
+            
+   
+		    </div>
+
+  <div class="col-md-12" align="center" >
+
+    <div class="input-group">
+      <form role="form-inline" action="/search" method="POST">
+        <div class="form-group">
+          <div class="col-md-11">
+            <label><input type="text" class="form-control" name="keyword" id="search" placeholder="Search for..." size="40"></label>
+          </div>
+          <div class="col-md-1" style="margin-left:-25px;">
+            <button class="btn btn-default" type="submit"> 
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="thumbnails">
+    <h2>TOP 4 Movies:</h2>
+      <div class="col-md-12" align="center">
+        <div class="col-md-3">
+          <div class="thumbnail">
+            <a href="/movie/tt3521164"> <img src="/assets/resources/poster/tt3521164.jpg"></a>
+  </div>
+  </div>
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <a href="/movie/tt3183660"> <img src="/assets/resources/poster/tt3183660.jpg"> </a>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <a href="/movie/tt2543164"> <img src="/assets/resources/poster/tt2543164.jpg"></a>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <a href="/movie/tt3640424"> <img src="/assets/resources/poster/tt3640424.jpg"></a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+</body>
+
+</html>

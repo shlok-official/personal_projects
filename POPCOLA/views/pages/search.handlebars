@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="/assets/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <main class="row">
+            <section class="col-sm-8">
+
+                <h2>
+                    <u> List of Notes and their Sumary:</u>
+                </h2>
+                {{#each movieList}}
+                <h3> Title: <a href="/movie/{{{imdb}}}"> {{{ title }}} </a></h3>
+                <h4> {{{ year }}}</h4> <br> {{/each}}
+
+            </section>
+
+        </main>
+    </div>
+
+</body>
+
+</html>

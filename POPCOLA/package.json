@@ -1,0 +1,25 @@
+{
+  "name": "movie_recommender",
+  "version": "1.0.0",
+  "description": "Final project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Jitendra Purohit",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "guid": "0.0.12",
+    "mongodb": "^2.1.7",
+    "omdb": "^0.5.0",
+    "request-promise": "^2.0.0",
+    "xss": "^0.2.13"
+  }
+}
