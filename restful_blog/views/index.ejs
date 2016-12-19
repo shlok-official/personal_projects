@@ -1,0 +1,33 @@
+<% include partials/header  %>
+<div class="ui main text container">
+    <div class="ui huge header"> RESTful working </div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <h1>Index page</h1>
+            <% blogShow.forEach(function(displayBlogs){%>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%= displayBlogs.image%>"</img>
+                    </div> 
+                    <div class="content">
+                        <a class="header" href="/blogs/<%= displayBlogs._id %>"<%=displayBlogs.title %></a>
+                    
+                    <div class="meta">
+                        <span><%=displayBlogs.created.toDateString() %></span>
+                    </div>
+                    <div>
+                        <p><%=displayBlogs.body.substring(0,50)%>...</p>
+                    </div>
+                    <div>
+                         <a class="ui floated basic violet button" href="/blogs/<%= displayBlogs._id %>">READ MORE
+                         <i class="right chevron icon"></i>
+                         </a>
+                    </div>
+                    </div>
+                </div>
+            <% })%>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer  %>
